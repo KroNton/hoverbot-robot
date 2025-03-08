@@ -17,7 +17,9 @@ void setup() {
 void loop() { 
 
   hoverboard_Receive(); 
-  Serial.print(feedback_speedR);
+  Serial.print("Speed Right: ");  Serial.print(feedback_speedR, 3); Serial.print(" counts/s | ");
+  Serial.print("Speed Left: ");  Serial.print(feedback_speedL, 3); Serial.print(" counts/s | ");
+  Serial.println(" ");
   hoverboard_Set_speed(100);
   
   delay(200);  
